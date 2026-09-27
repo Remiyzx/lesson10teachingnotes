@@ -154,12 +154,21 @@
         .error-example { color: var(--error-red); font-weight: bold; text-decoration: line-through; font-size: 1.2rem; }
         
         /* VISUAL SENTENCE BUILDER SLOTS */
+        .builder-wrapper {
+            margin: 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .builder-wrapper:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
         .sentence-builder {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             align-items: center;
-            margin: 10px 0;
+            margin: 6px 0;
             font-family: var(--pinyin-font);
             width: 100%;
         }
@@ -390,23 +399,32 @@
 
                     <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px;">Sentence Examples:</strong>
                     
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Wǒ</div>
-                        <div class="slot slot-prep">zài zhèr</div>
-                        <div class="slot slot-verb">mǎi</div>
-                        <div class="slot slot-obj">guāngpán.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Wǒ</div>
+                            <div class="slot slot-prep">zài zhèr</div>
+                            <div class="slot slot-verb">mǎi</div>
+                            <div class="slot slot-obj">guāngpán.</div>
+                        </div>
+                        <div class="translation">(I am buying a CD here.)</div>
                     </div>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Tā</div>
-                        <div class="slot slot-prep">bú zài Yǔyán Xuéyuàn</div>
-                        <div class="slot slot-verb">xuéxí.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Tā</div>
+                            <div class="slot slot-prep">bú zài Yǔyán Xuéyuàn</div>
+                            <div class="slot slot-verb">xuéxí.</div>
+                        </div>
+                        <div class="translation">(He does not study at the Language Institute.)</div>
                     </div>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Nín</div>
-                        <div class="slot slot-prep">zài nǎr</div>
-                        <div class="slot slot-verb">gōngzuò?</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Nín</div>
+                            <div class="slot slot-prep">zài nǎr</div>
+                            <div class="slot slot-verb">gōngzuò?</div>
+                        </div>
+                        <div class="translation">(Where do you work?)</div>
                     </div>
 
                     <div style="margin-top: 15px;" class="error-example">
@@ -476,12 +494,12 @@
                         <div style="flex: 1; min-width: 250px; background: white; padding: 12px 16px; border-radius: 8px; border-left: 5px solid var(--correct-green);">
                             <span style="font-weight: bold; color: var(--correct-green);">Positive (often):</span>
                             <br><span class="vocab-pinyin">chángcháng + Verb</span>
-                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., chángcháng qù / chángcháng kàn</span>
+                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., chángcháng qù <span class="translation">(often go)</span> / chángcháng kàn <span class="translation">(often watch)</span></span>
                         </div>
                         <div style="flex: 1; min-width: 250px; background: white; padding: 12px 16px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
                             <span style="font-weight: bold; color: var(--primary-color);">Negative (seldom / not often):</span>
                             <br><span class="vocab-pinyin">bù cháng + Verb</span>
-                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., bù cháng lái / bù cháng xuéxí</span>
+                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., bù cháng lái <span class="translation">(seldom come)</span> / bù cháng xuéxí <span class="translation">(seldom study)</span></span>
                         </div>
                     </div>
                     <div class="error-example" style="margin-top: 10px; font-size: 1.05rem;">
@@ -498,19 +516,22 @@
                             <strong style="color: var(--primary-color); font-size: 1.1rem;">WITHOUT "r" ➔ Pronouns / Modifiers</strong>
                             <p style="font-size: 0.95rem; color: var(--text-sub); margin-top: 4px;">Refers to things/people. Used with Measure Words:</p>
                             <ul style="margin-left: 18px; margin-top: 6px; line-height: 1.8;" class="vocab-pinyin">
-                                <li><strong>zhè / zhège:</strong> this / this one (e.g. zhè zhāng guāngpán)</li>
-                                <li><strong>nà / nàge:</strong> that / that one (e.g. nàge lǎoshī)</li>
-                                <li><strong>nǎ / nǎge:</strong> which / which one (e.g. nǎge xuésheng?)</li>
+                                <li><strong>zhè / zhège:</strong> this / this one <span class="translation">(e.g. zhè zhāng guāngpán - this CD)</span></li>
+                                <li><strong>nà / nàge:</strong> that / that one <span class="translation">(e.g. nàge lǎoshī - that teacher)</span></li>
+                                <li><strong>nǎ / nǎge:</strong> which / which one <span class="translation">(e.g. nǎge xuésheng? - which student?)</span></li>
                             </ul>
+                            <div style="margin-top: 10px; padding: 8px 12px; background-color: var(--light-green); border-radius: 6px; font-weight: bold;" class="vocab-pinyin">
+                                Formula: <span class="grammar-hl">zhè / nà / nǎ + Measure Word (+ Noun)</span>
+                            </div>
                         </div>
 
                         <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 5px solid var(--correct-green);">
-                            <strong style="color: var(--correct-green); font-size: 1.1rem;">WITH "r" (Érhuā 儿化) ➔ Location / Place Words!</strong>
+                            <strong style="color: var(--correct-green); font-size: 1.1rem;">WITH "r" ➔ Location / Place Words!</strong>
                             <p style="font-size: 0.95rem; color: var(--text-sub); margin-top: 4px;">💡 Adding "r" transforms the word into a Place/Location:</p>
                             <ul style="margin-left: 18px; margin-top: 6px; line-height: 1.8;" class="vocab-pinyin">
-                                <li><strong>zhèr:</strong> here (this place) ➔ Wǒmen zài zhèr shàngkè.</li>
-                                <li><strong>nàr:</strong> there (that place) ➔ Tā qù nàr yóuyǒng.</li>
-                                <li><strong>nǎr:</strong> where (which place) ➔ Nǐ xiànzài zài nǎr?</li>
+                                <li><strong>zhèr:</strong> here <span class="translation">(this place)</span> ➔ Wǒmen zài zhèr shàngkè. <span class="translation">(We have class here.)</span></li>
+                                <li><strong>nàr:</strong> there <span class="translation">(that place)</span> ➔ Tā qù nàr yóuyǒng. <span class="translation">(He goes there to swim.)</span></li>
+                                <li><strong>nǎr:</strong> where <span class="translation">(which place)</span> ➔ Nǐ xiànzài zài nǎr? <span class="translation">(Where are you now?)</span></li>
                             </ul>
                         </div>
                     </div>
@@ -555,12 +576,12 @@
                         <div style="flex: 1; min-width: 250px; background: white; padding: 12px; border-radius: 8px; border-top: 4px solid var(--primary-color);">
                             <strong style="color: var(--primary-color);">gēn (with / together)</strong>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">Action / Interaction with a person:</span>
-                            <br><span class="vocab-pinyin" style="font-size: 1rem;">gēn Lín Nà qù shāngchǎng</span>
+                            <br><span class="vocab-pinyin" style="font-size: 1rem;">gēn Lín Nà qù shāngchǎng</span> <span class="translation">(go to the mall with Lin Na)</span>
                         </div>
                         <div style="flex: 1; min-width: 250px; background: white; padding: 12px; border-radius: 8px; border-top: 4px solid var(--answer-blue);">
                             <strong style="color: var(--answer-blue);">hé (and)</strong>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">Listing items / nouns:</span>
-                            <br><span class="vocab-pinyin" style="font-size: 1rem; color: var(--answer-blue);">shū hé bàozhǐ</span>
+                            <br><span class="vocab-pinyin" style="font-size: 1rem; color: var(--answer-blue);">shū hé bàozhǐ</span> <span class="translation">(books and newspapers)</span>
                         </div>
                     </div>
 
@@ -574,9 +595,10 @@
                             <div class="slot slot-subj">Wǒ</div>
                             <div class="slot slot-time">chángcháng</div>
                             <div class="slot slot-prep">gēn jiějie</div>
-                            <div class="slot slot-prep" style="background-color: #FEF3C7;">zài diànyǐngyuàn</div>
-                            <div class="slot slot-verb">kàn diànyǐng.</div>
+                            <div class="slot slot-verb">zài diànyǐngyuàn</div>
+                            <div class="slot slot-subj">kàn diànyǐng.</div>
                         </div>
+                        <div class="translation">(I often watch movies at the cinema with my elder sister.)</div>
                     </div>
 
                     <!-- PATTERN B -->
@@ -586,29 +608,36 @@
                             <div class="slot slot-subj">Wǒ</div>
                             <div class="slot slot-prep">gēn jiějie</div>
                             <div class="slot slot-time">chángcháng</div>
-                            <div class="slot slot-prep" style="background-color: #FEF3C7;">zài diànyǐngyuàn</div>
-                            <div class="slot slot-verb">kàn diànyǐng.</div>
+                            <div class="slot slot-verb">zài diànyǐngyuàn</div>
+                            <div class="slot slot-subj">kàn diànyǐng.</div>
                         </div>
+                        <div class="translation">(I often watch movies at the cinema with my elder sister.)</div>
                     </div>
 
                     <hr style="border: 0.5px dashed var(--border-color); margin: 1.2rem 0;">
 
                     <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px;">More Sentence Examples (Both Word Orders):</strong>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Tā</div>
-                        <div class="slot slot-time">zuótiān</div>
-                        <div class="slot slot-prep">gēn péngyou</div>
-                        <div class="slot slot-prep" style="background-color: #FEF3C7;">zài shāngchǎng</div>
-                        <div class="slot slot-verb">mǎi guāngpán.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Tā</div>
+                            <div class="slot slot-time">zuótiān</div>
+                            <div class="slot slot-prep">gēn péngyou</div>
+                            <div class="slot slot-verb">zài shāngchǎng</div>
+                            <div class="slot slot-subj">mǎi guāngpán.</div>
+                        </div>
+                        <div class="translation">(He bought CDs at the shopping mall with a friend yesterday.)</div>
                     </div>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Dìdi</div>
-                        <div class="slot slot-prep">gēn māma</div>
-                        <div class="slot slot-time">míngtiān</div>
-                        <div class="slot slot-prep" style="background-color: #FEF3C7;">qù nàr</div>
-                        <div class="slot slot-verb">chī kǎoyā.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Dìdi</div>
+                            <div class="slot slot-prep">gēn māma</div>
+                            <div class="slot slot-time">míngtiān</div>
+                            <div class="slot slot-verb">qù nàr</div>
+                            <div class="slot slot-subj">chī kǎoyā.</div>
+                        </div>
+                        <div class="translation">(Younger brother is going there with mom to eat roast duck tomorrow.)</div>
                     </div>
                 </div>
             </div>
@@ -753,20 +782,20 @@
                         <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
                             <strong style="color: var(--primary-color); font-size: 1.1rem;">Inquiring / Asking Prices:</strong>
                             <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;" class="vocab-pinyin">
-                                <li>Yì jīn píngguǒ duōshao qián?</li>
-                                <li>Duōshao qián yì jīn (píngguǒ)?</li>
-                                <li>Píngguǒ yì jīn duōshao qián?</li>
-                                <li>Píngguǒ duōshao qián yì jīn?</li>
+                                <li>Yì jīn píngguǒ duōshao qián? <span class="translation">(How much is one jin of apples?)</span></li>
+                                <li>Duōshao qián yì jīn (píngguǒ)? <span class="translation">(How much per jin for apples?)</span></li>
+                                <li>Píngguǒ yì jīn duōshao qián? <span class="translation">(As for apples, how much per jin?)</span></li>
+                                <li>Píngguǒ duōshao qián yì jīn? <span class="translation">(How much per jin are apples?)</span></li>
                             </ul>
                         </div>
                         <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 4px solid var(--accent-color);">
                             <strong style="color: var(--accent-color); font-size: 1.1rem;">Answering Prices:</strong>
                             <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;" class="vocab-pinyin">
-                                <li>Yì jīn píngguǒ sān kuài wǔ.</li>
-                                <li>Sān kuài wǔ yì jīn.</li>
-                                <li>Píngguǒ yì jīn sān kuài wǔ.</li>
-                                <li>Píngguǒ sān kuài wǔ yì jīn.</li>
-                                <li>Sān kuài wǔ.</li>
+                                <li>Yì jīn píngguǒ sān kuài wǔ. <span class="translation">(One jin of apples is 3.50 yuan.)</span></li>
+                                <li>Sān kuài wǔ yì jīn. <span class="translation">(3.50 yuan per jin.)</span></li>
+                                <li>Píngguǒ yì jīn sān kuài wǔ. <span class="translation">(Apples are 3.50 yuan per jin.)</span></li>
+                                <li>Píngguǒ sān kuài wǔ yì jīn. <span class="translation">(Apples are 3.50 yuan per jin.)</span></li>
+                                <li>Sān kuài wǔ. <span class="translation">(3.50 yuan.)</span></li>
                             </ul>
                         </div>
                     </div>
@@ -778,12 +807,12 @@
                         <div style="background: white; padding: 12px 16px; border-radius: 8px; flex: 1; min-width: 220px;">
                             <strong style="color: var(--primary-color);">Adverb (Many / Much)</strong>
                             <br><span class="grammar-hl">hěn / zhēn + duō</span>
-                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., hěn duō rén / zhēn duō</span>
+                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., hěn duō rén <span class="translation">(many people)</span> / zhēn duō <span class="translation">(really many)</span></span>
                         </div>
                         <div style="background: white; padding: 12px 16px; border-radius: 8px; flex: 1; min-width: 220px;">
                             <strong style="color: var(--answer-blue);">Question Word (How)</strong>
                             <br><span class="grammar-hl" style="background-color: #E0F2FE; color: #0369A1;">duō + shao / dà</span>
-                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., duōshao qián / duō dà</span>
+                            <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., duōshao qián <span class="translation">(how much money)</span> / duō dà <span class="translation">(how old)</span></span>
                         </div>
                     </div>
                 </div>
@@ -844,8 +873,8 @@
                         
                         <div style="margin-top: 10px; line-height: 1.8;" class="vocab-pinyin">
                             <strong>• Full Form (Formal):</strong>
-                            <br>RM 3.20 ➔ sān kuài èr máo qián
-                            <br>RM 10.55 ➔ shí kuài wǔ máo wǔ fēn qián
+                            <br>RM 3.20 ➔ sān kuài èr máo qián <span class="translation">(3.20 yuan)</span>
+                            <br>RM 10.55 ➔ shí kuài wǔ máo wǔ fēn qián <span class="translation">(10.55 yuan)</span>
                         </div>
                         
                         <div style="margin-top: 10px; line-height: 1.8;" class="vocab-pinyin">
@@ -867,7 +896,7 @@
 
                     <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 10px; border-left: 4px solid var(--accent-color); width: 100%;" class="vocab-pinyin">
                         <strong>• Note on "2 máo":</strong>
-                        <br>People say <span class="grammar-hl">èr máo qián</span> or <span class="grammar-hl">liǎng máo qián</span>. When "2 máo" is at the beginning, <span class="grammar-hl">liǎng máo</span> is often preferred.
+                        <br>People say <span class="grammar-hl">èr máo qián</span> or <span class="grammar-hl">liǎng máo qián</span> <span class="translation">(20 cents / 0.20 yuan)</span>. When "2 máo" is at the beginning, <span class="grammar-hl">liǎng máo</span> is often preferred.
                     </div>
                 </div>
 
@@ -929,7 +958,7 @@
                 <div class="rule-box">
                     <strong style="font-size: 1.15rem; color: var(--primary-color);">1. Clarifying Intentions: <span class="grammar-hl">wǒ shì wèn...</span></strong>
                     <br>• Used to clarify what you mean or ask: (What I mean is... / I'm asking...)
-                    <br><span class="vocab-pinyin" style="color: var(--text-main); font-size: 1.05rem;">➔ Duìbuqǐ, wǒ shì wèn: Zhège Hànyǔ zěnme shuō?</span>
+                    <br><span class="vocab-pinyin" style="color: var(--text-main); font-size: 1.05rem;">➔ Duìbuqǐ, wǒ shì wèn: Zhège Hànyǔ zěnme shuō?</span> <span class="translation">(Sorry, I'm asking: how do you say this in Chinese?)</span>
                 </div>
 
                 <div class="rule-box" style="margin-top: 1rem;">
@@ -949,25 +978,34 @@
 
                     <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px;">Sentence Examples:</strong>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Wǒ</div>
-                        <div class="slot slot-verb">zài sòng</div>
-                        <div class="slot slot-prep">nín</div>
-                        <div class="slot slot-obj">yí ge píngguǒ.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Wǒ</div>
+                            <div class="slot slot-verb">zài sòng</div>
+                            <div class="slot slot-prep">nín</div>
+                            <div class="slot slot-obj">yí ge píngguǒ.</div>
+                        </div>
+                        <div class="translation">(I'll also give you one apple for free.)</div>
                     </div>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Tā</div>
-                        <div class="slot slot-verb">gěi</div>
-                        <div class="slot slot-prep">wǒ</div>
-                        <div class="slot slot-obj">yí ge běnzi.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Tā</div>
+                            <div class="slot slot-verb">gěi</div>
+                            <div class="slot slot-prep">wǒ</div>
+                            <div class="slot slot-obj">yí ge běnzi.</div>
+                        </div>
+                        <div class="translation">(He gives me a notebook.)</div>
                     </div>
 
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Wǒ</div>
-                        <div class="slot slot-verb">zhǎo</div>
-                        <div class="slot slot-prep">nín</div>
-                        <div class="slot slot-obj">liù kuài.</div>
+                    <div class="builder-wrapper">
+                        <div class="sentence-builder">
+                            <div class="slot slot-subj">Wǒ</div>
+                            <div class="slot slot-verb">zhǎo</div>
+                            <div class="slot slot-prep">nín</div>
+                            <div class="slot slot-obj">liù kuài.</div>
+                        </div>
+                        <div class="translation">(I'll give you 6 yuan change.)</div>
                     </div>
                 </div>
             </div>
