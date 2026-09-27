@@ -122,7 +122,7 @@
         .content-header h2 { color: var(--primary-color); font-size: 2.1rem; }
 
         /* CARDS & LARGE TEXT */
-        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 4px 10px rgba(6, 78, 59, 0.05); margin-bottom: 1.8rem; padding: 2rem; }
+        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 4px 10px rgba(6, 78, 59, 0.05); margin-bottom: 1.8rem; padding: 2rem; width: 100%; }
         .card-title { font-size: 1.4rem; font-weight: bold; color: var(--primary-color); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px dashed var(--border-color); display: flex; align-items: center; justify-content: space-between; }
         .page-badge { background-color: #D1FAE5; color: #065F46; font-size: 0.85rem; padding: 3px 10px; border-radius: 12px; font-weight: bold; }
         .translation { display: inline; font-size: 1.05rem; color: var(--text-sub); font-weight: normal; margin-left: 8px; font-family: 'Helvetica Neue', Arial, sans-serif; }
@@ -132,12 +132,13 @@
         .vocab-table th, .vocab-table td { text-align: left; padding: 0.9rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
         .vocab-table th { background-color: var(--light-green); color: var(--primary-color); font-size: 0.95rem; text-transform: uppercase; border-bottom: 2px solid var(--border-color); }
         .vocab-num { font-weight: bold; color: var(--accent-color); width: 8%; }
+        .vocab-table td.vocab-pinyin-cell { width: 22%; font-weight: bold; color: var(--primary-color); font-size: 1.2rem; font-family: var(--pinyin-font) !important; }
         
         .vocab-pinyin, .vocab-collo, .vocab-sent, .dlg-py, .qa-q, .qa-a, .correct-example, .error-example, .dlg-turn, .dlg-turn-ans {
             font-family: var(--pinyin-font) !important;
         }
 
-        .vocab-pinyin { font-weight: bold; color: var(--primary-color); width: 25%; font-size: 1.2rem; }
+        .vocab-pinyin { font-weight: bold; color: var(--primary-color); font-size: 1.15rem; }
         .vocab-collo { color: var(--text-sub); margin-bottom: 4px; font-size: 1.1rem; }
         .collo-target { font-weight: bold; color: var(--primary-color); }
         .vocab-sent { color: var(--primary-color); font-weight: 500; font-size: 1.15rem; }
@@ -147,7 +148,7 @@
         .hl { font-weight: bold; color: #047857; background-color: #D1FAE5; padding: 2px 6px; border-radius: 4px; border-bottom: 2px solid #A7F3D0; }
 
         /* RULES & VISUAL GRAMMAR SLOTS */
-        .rule-box { background-color: var(--light-green); border: 1.5px solid var(--border-color); border-radius: 10px; padding: 1.4rem; margin-top: 1rem; font-size: 1.1rem; }
+        .rule-box { background-color: var(--light-green); border: 1.5px solid var(--border-color); border-radius: 10px; padding: 1.4rem; margin-top: 1rem; font-size: 1.1rem; width: 100%; }
         .grammar-hl { color: var(--primary-color); font-weight: bold; background-color: #A7F3D0; padding: 2px 6px; border-radius: 4px; }
         .correct-example { color: var(--correct-green); font-weight: bold; font-size: 1.2rem; }
         .error-example { color: var(--error-red); font-weight: bold; text-decoration: line-through; font-size: 1.2rem; }
@@ -160,6 +161,7 @@
             align-items: center;
             margin: 10px 0;
             font-family: var(--pinyin-font);
+            width: 100%;
         }
         .slot {
             padding: 8px 14px;
@@ -201,6 +203,7 @@
             border-top: 1px solid var(--border-color);
             border-right: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
+            width: 100%;
         }
         
         .interactive-dlg:hover {
@@ -238,6 +241,7 @@
             border-top: 1px solid var(--border-color);
             border-right: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
+            width: 100%;
         }
         .key-sent-card:hover {
             background-color: var(--light-green);
@@ -260,13 +264,13 @@
         .key-sent-card.revealed .key-sent-eng { display: block; animation: fadeIn 0.3s ease-in-out; }
 
         .speaker { font-weight: bold; color: var(--primary-color); }
-        .dlg-turn { padding: 0.7rem 1rem; margin-bottom: 0.5rem; background-color: #F8FAF8; border-left: 4px solid var(--primary-color); border-radius: 0 6px 6px 0; font-size: 1.15rem; }
+        .dlg-turn { padding: 0.7rem 1rem; margin-bottom: 0.5rem; background-color: #F8FAF8; border-left: 4px solid var(--primary-color); border-radius: 0 6px 6px 0; font-size: 1.15rem; width: 100%; }
         
-        .line-guide-box { background-color: #D1FAE5; border-left: 8px solid var(--accent-color); padding: 1.4rem 1.8rem; border-radius: 10px; margin-top: 1.8rem; margin-bottom: 1rem; }
+        .line-guide-box { background-color: #D1FAE5; border-left: 8px solid var(--accent-color); padding: 1.4rem 1.8rem; border-radius: 10px; margin-top: 1.8rem; margin-bottom: 1rem; width: 100%; }
         .line-guide-title { font-weight: bold; color: #065F46; font-size: 1.25rem; margin-bottom: 8px; }
         .line-guide-text { color: #047857; font-size: 1.1rem; line-height: 1.6; }
 
-        .break-card { background-color: var(--primary-color); color: white; text-align: center; padding: 4rem 2rem; border-radius: 16px; border-top: 8px solid var(--accent-color); margin-top:2rem;}
+        .break-card { background-color: var(--primary-color); color: white; text-align: center; padding: 4rem 2rem; border-radius: 16px; border-top: 8px solid var(--accent-color); margin-top:2rem; width: 100%;}
         .break-card h2 { font-size: 3rem; margin-bottom: 1.2rem; }
         .break-card p { font-size: 1.4rem; color: #A7F3D0; }
 
@@ -349,15 +353,15 @@
                     <thead><tr><th>#</th><th>Pinyin</th><th>Meaning</th><th>Collocation & Special Notes</th></tr></thead>
                     <tbody>
                         <tr>
-                            <td class="vocab-num">#1</td><td class="vocab-pinyin">zài</td><td>at, in, on</td>
+                            <td class="vocab-num">#1</td><td class="vocab-pinyin-cell">zài</td><td>at, in, on</td>
                             <td><div class="vocab-collo">Collocation: <span class="collo-target">zài</span> jiā / <span class="collo-target">zài</span> xuéyuàn / <span class="collo-target">zài</span> zhèr</div><div class="vocab-sent">Sentence: Wǒ zài zhèr mǎi guāngpán.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#6</td><td class="vocab-pinyin">shāngchǎng 🏬</td><td>market, shopping mall</td>
+                            <td class="vocab-num">#6</td><td class="vocab-pinyin-cell">shāngchǎng 🏬</td><td>market, shopping mall</td>
                             <td><div class="vocab-collo">Collocation: zài <span class="collo-target">shāngchǎng</span> / jìn <span class="collo-target">shāngchǎng</span></div><div class="vocab-sent">Sentence: Zhège shāngchǎng hěn dà.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#11</td><td class="vocab-pinyin">nàr</td><td>there</td>
+                            <td class="vocab-num">#11</td><td class="vocab-pinyin-cell">nàr</td><td>there</td>
                             <td><div class="vocab-collo">Collocation: qù <span class="collo-target">nàr</span> / zài <span class="collo-target">nàr</span></div><div class="vocab-sent">Sentence: Yǒu, zài nàr mǎi.</div></td>
                         </tr>
                     </tbody>
@@ -424,38 +428,38 @@
                     <thead><tr><th>#</th><th>Pinyin</th><th>Meaning</th><th>Collocation & Example Sentence</th></tr></thead>
                     <tbody>
                         <tr>
-                            <td class="vocab-num">#2</td><td class="vocab-pinyin">guāngpán 💿</td><td>CD</td>
+                            <td class="vocab-num">#2</td><td class="vocab-pinyin-cell">guāngpán 💿</td><td>CD</td>
                             <td><div class="vocab-collo">Collocation: yì zhāng <span class="collo-target">guāngpán</span></div><div class="vocab-sent">Sentence: Wǒ mǎi yīnyuè guāngpán.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#3</td><td class="vocab-pinyin">yīnyuè 🎵</td><td>music</td>
+                            <td class="vocab-num">#3</td><td class="vocab-pinyin-cell">yīnyuè 🎵</td><td>music</td>
                             <td><div class="vocab-collo">Collocation: <span class="collo-target">yīnyuè</span> guāngpán / Zhōngguó <span class="collo-target">yīnyuè</span></div><div class="vocab-sent">Sentence: Nǐ xǐhuan shénme yīnyuè?</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#4</td><td class="vocab-pinyin">chángcháng / cháng</td><td>often</td>
+                            <td class="vocab-num">#4</td><td class="vocab-pinyin-cell">chángcháng / cháng</td><td>often</td>
                             <td>
                                 <div class="vocab-collo">Collocation: <span class="collo-target">chángcháng</span> lái / bù <span class="collo-target">cháng</span></div>
                                 <div class="vocab-sent">Sentence: Xīngqītiān wǒ chángcháng qù xiǎo shāngchǎng. Wǒ bù cháng lái zhèr.</div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#7</td><td class="vocab-pinyin">yǒumíng</td><td>famous</td>
+                            <td class="vocab-num">#7</td><td class="vocab-pinyin-cell">yǒumíng</td><td>famous</td>
                             <td><div class="vocab-collo">Collocation: <span class="collo-target">yǒumíng</span> de jiàoshòu / <span class="collo-target">yǒumíng</span> de yīshēng</div><div class="vocab-sent">Sentence: Zhè zhāng hěn hǎo, shì Liáng Zhù, hěn yǒumíng.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#8</td><td class="vocab-pinyin">shū 📖</td><td>book</td>
+                            <td class="vocab-num">#8</td><td class="vocab-pinyin-cell">shū 📖</td><td>book</td>
                             <td><div class="vocab-collo">Collocation: Hànyǔ <span class="collo-target">shū</span> / kàn <span class="collo-target">shū</span></div><div class="vocab-sent">Sentence: Zhèr méiyǒu shū.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#9</td><td class="vocab-pinyin">bàozhǐ 📰</td><td>newspaper</td>
+                            <td class="vocab-num">#9</td><td class="vocab-pinyin-cell">bàozhǐ 📰</td><td>newspaper</td>
                             <td><div class="vocab-collo">Collocation: mǎi <span class="collo-target">bàozhǐ</span> / kàn <span class="collo-target">bàozhǐ</span></div><div class="vocab-sent">Sentence: Zhèr yě méiyǒu bàozhǐ.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#10</td><td class="vocab-pinyin">běnzi 📓</td><td>notebook</td>
+                            <td class="vocab-num">#10</td><td class="vocab-pinyin-cell">běnzi 📓</td><td>notebook</td>
                             <td><div class="vocab-collo">Collocation: yí ge <span class="collo-target">běnzi</span> / mǎi <span class="collo-target">běnzi</span></div><div class="vocab-sent">Sentence: Wǒ yě mǎi běnzi.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#12</td><td class="vocab-pinyin">Liáng Zhù</td><td>Butterfly Lovers</td>
+                            <td class="vocab-num">#12</td><td class="vocab-pinyin-cell">Liáng Zhù</td><td>Butterfly Lovers</td>
                             <td><div class="vocab-collo">Collocation: shì <span class="collo-target">Liáng Zhù</span></div><div class="vocab-sent">Sentence: Zhè zhāng shì Liáng Zhù.</div></td>
                         </tr>
                     </tbody>
@@ -468,13 +472,13 @@
                 
                 <div class="rule-box">
                     <strong style="font-size: 1.15rem; color: var(--primary-color);">1. Frequency Adverbs Structure:</strong>
-                    <div style="display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap;">
-                        <div style="background: white; padding: 10px 15px; border-radius: 8px; border-left: 5px solid var(--correct-green);">
+                    <div style="display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; width: 100%;">
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 12px 16px; border-radius: 8px; border-left: 5px solid var(--correct-green);">
                             <span style="font-weight: bold; color: var(--correct-green);">Positive (often):</span>
                             <br><span class="vocab-pinyin">chángcháng + Verb</span>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., chángcháng qù / chángcháng kàn</span>
                         </div>
-                        <div style="background: white; padding: 10px 15px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 12px 16px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
                             <span style="font-weight: bold; color: var(--primary-color);">Negative (seldom / not often):</span>
                             <br><span class="vocab-pinyin">bù cháng + Verb</span>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., bù cháng lái / bù cháng xuéxí</span>
@@ -485,18 +489,29 @@
                     </div>
                 </div>
 
+                <!-- ADDED COMPARISON: zhè/nà/nǎ vs zhèr/nàr/nǎr -->
                 <div class="rule-box" style="margin-top: 1rem;">
-                    <strong style="font-size: 1.15rem; color: var(--primary-color);">2. Demonstratives with Measure Words (zhè / nà / nǎ):</strong>
-                    <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
-                        <div style="background: white; padding: 10px 15px; border-radius: 8px;">
-                            <strong>A. Modifying / Naming a Noun:</strong>
-                            <br><span class="grammar-hl">zhè / nà / nǎ + Measure Word + Noun</span>
-                            <br><span class="vocab-pinyin" style="font-size: 1.05rem; color: var(--text-main);">➔ zhè zhāng guāngpán / nàge lǎoshī / nǎge xuésheng</span>
+                    <strong style="font-size: 1.15rem; color: var(--primary-color);">2. Demonstratives Comparison: Pronouns vs Place Words (+ "r")</strong>
+                    
+                    <div style="margin-top: 10px; display: flex; gap: 15px; flex-wrap: wrap; width: 100%;">
+                        <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 5px solid var(--primary-color);">
+                            <strong style="color: var(--primary-color); font-size: 1.1rem;">WITHOUT "r" ➔ Pronouns / Modifiers</strong>
+                            <p style="font-size: 0.95rem; color: var(--text-sub); margin-top: 4px;">Refers to things/people. Used with Measure Words:</p>
+                            <ul style="margin-left: 18px; margin-top: 6px; line-height: 1.8;" class="vocab-pinyin">
+                                <li><strong>zhè / zhège:</strong> this / this one (e.g. zhè zhāng guāngpán)</li>
+                                <li><strong>nà / nàge:</strong> that / that one (e.g. nàge lǎoshī)</li>
+                                <li><strong>nǎ / nǎge:</strong> which / which one (e.g. nǎge xuésheng?)</li>
+                            </ul>
                         </div>
-                        <div style="background: white; padding: 10px 15px; border-radius: 8px;">
-                            <strong>B. Stating / Asking Identity (NO Measure Word!):</strong>
-                            <br><span class="grammar-hl">Subject (zhè / nà) + Verb (shì / jiào) + Noun</span>
-                            <br><span class="vocab-pinyin" style="font-size: 1.05rem; color: var(--text-main);">➔ Zhè shì shénme? / Nà jiào wǔshù.</span>
+
+                        <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 5px solid var(--correct-green);">
+                            <strong style="color: var(--correct-green); font-size: 1.1rem;">WITH "r" (Érhuā 儿化) ➔ Location / Place Words!</strong>
+                            <p style="font-size: 0.95rem; color: var(--text-sub); margin-top: 4px;">💡 Adding "r" transforms the word into a Place/Location:</p>
+                            <ul style="margin-left: 18px; margin-top: 6px; line-height: 1.8;" class="vocab-pinyin">
+                                <li><strong>zhèr:</strong> here (this place) ➔ Wǒmen zài zhèr shàngkè.</li>
+                                <li><strong>nàr:</strong> there (that place) ➔ Tā qù nàr yóuyǒng.</li>
+                                <li><strong>nǎr:</strong> where (which place) ➔ Nǐ xiànzài zài nǎr?</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -525,7 +540,7 @@
                     <thead><tr><th>#</th><th>Pinyin</th><th>Meaning</th><th>Collocation & Special Notes</th></tr></thead>
                     <tbody>
                         <tr>
-                            <td class="vocab-num">#5</td><td class="vocab-pinyin">gēn</td><td>with; to follow</td>
+                            <td class="vocab-num">#5</td><td class="vocab-pinyin-cell">gēn</td><td>with; to follow</td>
                             <td><div class="vocab-collo">Collocation: <span class="collo-target">gēn</span> tā lái / <span class="collo-target">gēn</span> Lín Nà qù / <span class="collo-target">gēn</span> wǒ xué</div><div class="vocab-sent">Sentence: Xīngqītiān wǒ chángcháng gēn Lín Nà qù xiǎo shāngchǎng.</div></td>
                         </tr>
                     </tbody>
@@ -536,39 +551,49 @@
                 <div class="card-title">Grammar: Prepositional Phrase with "gēn" (Pg 165)</div>
                 
                 <div class="rule-box">
-                    <div style="display: flex; gap: 20px; margin-bottom: 15px; flex-wrap: wrap;">
-                        <div style="flex: 1; background: white; padding: 12px; border-radius: 8px; border-top: 4px solid var(--primary-color);">
+                    <div style="display: flex; gap: 20px; margin-bottom: 15px; flex-wrap: wrap; width: 100%;">
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 12px; border-radius: 8px; border-top: 4px solid var(--primary-color);">
                             <strong style="color: var(--primary-color);">gēn (with / together)</strong>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">Action / Interaction with a person:</span>
                             <br><span class="vocab-pinyin" style="font-size: 1rem;">gēn Lín Nà qù shāngchǎng</span>
                         </div>
-                        <div style="flex: 1; background: white; padding: 12px; border-radius: 8px; border-top: 4px solid var(--answer-blue);">
+                        <div style="flex: 1; min-width: 250px; background: white; padding: 12px; border-radius: 8px; border-top: 4px solid var(--answer-blue);">
                             <strong style="color: var(--answer-blue);">hé (and)</strong>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">Listing items / nouns:</span>
                             <br><span class="vocab-pinyin" style="font-size: 1rem; color: var(--answer-blue);">shū hé bàozhǐ</span>
                         </div>
                     </div>
 
-                    <strong style="font-size: 1.15rem; color: var(--primary-color);">Visual Time + Location + Accompaniment Slots:</strong>
-                    
-                    <div class="sentence-builder" style="margin-top: 10px;">
-                        <div class="slot slot-subj"><span class="slot-label">Subject</span>Subject</div>
-                        <div class="slot slot-time"><span class="slot-label">Time</span>Time</div>
-                        <div class="slot slot-prep"><span class="slot-label">With Person</span>gēn + Person</div>
-                        <div class="slot slot-prep" style="background-color: #FEF3C7;"><span class="slot-label">Location</span>zài + Place</div>
-                        <div class="slot slot-verb"><span class="slot-label">Action</span>Verb + Object</div>
+                    <strong style="font-size: 1.15rem; color: var(--primary-color);">Flexible Word Orders for Time & "gēn + Person" (Both are Correct!):</strong>
+                    <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 8px;">Time can be placed either BEFORE or AFTER "gēn + Person":</p>
+
+                    <!-- PATTERN A -->
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; margin-bottom: 12px;">
+                        <strong style="color: var(--primary-color);">Pattern A: Subject + Time + gēn + Person + zài + Place + Verb + Object</strong>
+                        <div class="sentence-builder" style="margin-top: 8px;">
+                            <div class="slot slot-subj">Wǒ</div>
+                            <div class="slot slot-time">chángcháng</div>
+                            <div class="slot slot-prep">gēn jiějie</div>
+                            <div class="slot slot-prep" style="background-color: #FEF3C7;">zài diànyǐngyuàn</div>
+                            <div class="slot slot-verb">kàn diànyǐng.</div>
+                        </div>
+                    </div>
+
+                    <!-- PATTERN B -->
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px;">
+                        <strong style="color: var(--accent-color);">Pattern B: Subject + gēn + Person + Time + zài + Place + Verb + Object</strong>
+                        <div class="sentence-builder" style="margin-top: 8px;">
+                            <div class="slot slot-subj">Wǒ</div>
+                            <div class="slot slot-prep">gēn jiějie</div>
+                            <div class="slot slot-time">chángcháng</div>
+                            <div class="slot slot-prep" style="background-color: #FEF3C7;">zài diànyǐngyuàn</div>
+                            <div class="slot slot-verb">kàn diànyǐng.</div>
+                        </div>
                     </div>
 
                     <hr style="border: 0.5px dashed var(--border-color); margin: 1.2rem 0;">
 
-                    <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px;">Sentence Examples:</strong>
-
-                    <div class="sentence-builder">
-                        <div class="slot slot-subj">Wǒ</div>
-                        <div class="slot slot-time">xīngqītiān</div>
-                        <div class="slot slot-prep">gēn Lín Nà</div>
-                        <div class="slot slot-verb">qù xiǎo shāngchǎng.</div>
-                    </div>
+                    <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px;">More Sentence Examples (Both Word Orders):</strong>
 
                     <div class="sentence-builder">
                         <div class="slot slot-subj">Tā</div>
@@ -580,8 +605,8 @@
 
                     <div class="sentence-builder">
                         <div class="slot slot-subj">Dìdi</div>
-                        <div class="slot slot-time">míngtiān</div>
                         <div class="slot slot-prep">gēn māma</div>
+                        <div class="slot slot-time">míngtiān</div>
                         <div class="slot slot-prep" style="background-color: #FEF3C7;">qù nàr</div>
                         <div class="slot slot-verb">chī kǎoyā.</div>
                     </div>
@@ -682,15 +707,15 @@
                     <thead><tr><th>#</th><th>Pinyin</th><th>Meaning</th><th>Collocation & Example Sentence</th></tr></thead>
                     <tbody>
                         <tr>
-                            <td class="vocab-num">#4</td><td class="vocab-pinyin">xiāngjiāo / píngguǒ / xiāngjiāo píngguǒ</td><td>banana / apple / apple with the taste of a banana</td>
+                            <td class="vocab-num">#4</td><td class="vocab-pinyin-cell">xiāngjiāo 🍌<br>píngguǒ 🍎<br>xiāngjiāo píngguǒ</td><td>banana<br>apple<br>apple with the taste of a banana</td>
                             <td><div class="vocab-collo">Collocation: mǎi <span class="collo-target">xiāngjiāo</span> / yí ge <span class="collo-target">píngguǒ</span> / yí ge <span class="collo-target">xiāngjiāo píngguǒ</span></div><div class="vocab-sent">Sentence: Zhè jiào xiāngjiāo píngguǒ.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#8</td><td class="vocab-pinyin">pútao 🍇</td><td>grape</td>
+                            <td class="vocab-num">#8</td><td class="vocab-pinyin-cell">pútao 🍇</td><td>grape</td>
                             <td><div class="vocab-collo">Collocation: liǎng <span class="collo-target">jīn</span> <span class="collo-target">pútao</span></div><div class="vocab-sent">Sentence: Nà shì pútao.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#9</td><td class="vocab-pinyin">jīn</td><td>measure word of weight (500g)</td>
+                            <td class="vocab-num">#9</td><td class="vocab-pinyin-cell">jīn</td><td>measure word of weight (500g)</td>
                             <td><div class="vocab-collo">Collocation: yì <span class="collo-target">jīn</span> píngguǒ / liǎng <span class="collo-target">jīn</span> pútao</div><div class="vocab-sent">Sentence: Yì jīn píngguǒ duōshao qián?</div></td>
                         </tr>
                     </tbody>
@@ -724,19 +749,19 @@
                     <strong style="font-size: 1.15rem; color: var(--primary-color);">2. Sentence Patterns for Asking & Answering Prices:</strong>
                     <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 10px;">Word order is flexible in spoken Chinese, but the core meaning stays identical!</p>
                     
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <div style="flex: 1; background: white; padding: 12px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                            <strong style="color: var(--primary-color);">Inquiring / Asking Prices:</strong>
-                            <ul style="margin-left: 18px; margin-top: 6px;" class="vocab-pinyin">
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; width: 100%;">
+                        <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                            <strong style="color: var(--primary-color); font-size: 1.1rem;">Inquiring / Asking Prices:</strong>
+                            <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;" class="vocab-pinyin">
                                 <li>Yì jīn píngguǒ duōshao qián?</li>
                                 <li>Duōshao qián yì jīn (píngguǒ)?</li>
                                 <li>Píngguǒ yì jīn duōshao qián?</li>
                                 <li>Píngguǒ duōshao qián yì jīn?</li>
                             </ul>
                         </div>
-                        <div style="flex: 1; background: white; padding: 12px; border-radius: 8px; border-left: 4px solid var(--accent-color);">
-                            <strong style="color: var(--accent-color);">Answering Prices:</strong>
-                            <ul style="margin-left: 18px; margin-top: 6px;" class="vocab-pinyin">
+                        <div style="flex: 1; min-width: 280px; background: white; padding: 14px; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                            <strong style="color: var(--accent-color); font-size: 1.1rem;">Answering Prices:</strong>
+                            <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.8;" class="vocab-pinyin">
                                 <li>Yì jīn píngguǒ sān kuài wǔ.</li>
                                 <li>Sān kuài wǔ yì jīn.</li>
                                 <li>Píngguǒ yì jīn sān kuài wǔ.</li>
@@ -749,13 +774,13 @@
 
                 <div class="rule-box" style="margin-top: 1rem;">
                     <strong style="font-size: 1.15rem; color: var(--primary-color);">3. "duō" Usage Visual:</strong>
-                    <div style="display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap;">
-                        <div style="background: white; padding: 10px 15px; border-radius: 8px; flex: 1;">
+                    <div style="display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; width: 100%;">
+                        <div style="background: white; padding: 12px 16px; border-radius: 8px; flex: 1; min-width: 220px;">
                             <strong style="color: var(--primary-color);">Adverb (Many / Much)</strong>
                             <br><span class="grammar-hl">hěn / zhēn + duō</span>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., hěn duō rén / zhēn duō</span>
                         </div>
-                        <div style="background: white; padding: 10px 15px; border-radius: 8px; flex: 1;">
+                        <div style="background: white; padding: 12px 16px; border-radius: 8px; flex: 1; min-width: 220px;">
                             <strong style="color: var(--answer-blue);">Question Word (How)</strong>
                             <br><span class="grammar-hl" style="background-color: #E0F2FE; color: #0369A1;">duō + shao / dà</span>
                             <br><span style="font-size: 0.95rem; color: var(--text-sub);">e.g., duōshao qián / duō dà</span>
@@ -777,23 +802,23 @@
                     <thead><tr><th>#</th><th>Pinyin</th><th>Meaning</th><th>Collocation & Special Notes</th></tr></thead>
                     <tbody>
                         <tr>
-                            <td class="vocab-num">#10</td><td class="vocab-pinyin">qián 💵</td><td>money</td>
+                            <td class="vocab-num">#10</td><td class="vocab-pinyin-cell">qián 💵</td><td>money</td>
                             <td><div class="vocab-collo">Collocation: duōshao <span class="collo-target">qián</span></div><div class="vocab-sent">Sentence: Yígòng shísì kuài qián.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#11</td><td class="vocab-pinyin">kuài (qián)</td><td>yuan (basic unit)</td>
+                            <td class="vocab-num">#11</td><td class="vocab-pinyin-cell">kuài (qián)</td><td>yuan (basic unit)</td>
                             <td><div class="vocab-collo">Collocation: liǎng <span class="collo-target">kuài</span> qián / èrshí <span class="collo-target">kuài</span> qián</div><div class="vocab-sent">Sentence: Wǒ zhǎo nín liù kuài.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#12</td><td class="vocab-pinyin">máo (qián)</td><td>jiao (1/10 yuan)</td>
+                            <td class="vocab-num">#12</td><td class="vocab-pinyin-cell">máo (qián)</td><td>jiao (1/10 yuan)</td>
                             <td><div class="vocab-collo">Collocation: liǎng <span class="collo-target">máo</span> qián / liù <span class="collo-target">máo</span> wǔ</div><div class="vocab-sent">Sentence: Yì jīn sān kuài èr máo qián.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#15</td><td class="vocab-pinyin">fēn (qián)</td><td>fen (1/100 yuan)</td>
+                            <td class="vocab-num">#15</td><td class="vocab-pinyin-cell">fēn (qián)</td><td>fen (1/100 yuan)</td>
                             <td><div class="vocab-collo">Collocation: yì <span class="collo-target">fēn</span> qián / bā <span class="collo-target">fēn</span> qián</div><div class="vocab-sent">Sentence: Liǎng kuài qī máo wǔ fēn yì jīn.</div></td>
                         </tr>
                         <tr>
-                            <td class="vocab-num">#13</td><td class="vocab-pinyin">guì</td><td>expensive</td>
+                            <td class="vocab-num">#13</td><td class="vocab-pinyin-cell">guì</td><td>expensive</td>
                             <td><div class="vocab-collo">Collocation: hěn <span class="collo-target">guì</span> / zhēn <span class="collo-target">guì</span> / bú <span class="collo-target">guì</span></div><div class="vocab-sent">Sentence: Nín de píngguǒ zhēn guì.</div></td>
                         </tr>
                     </tbody>
@@ -805,7 +830,7 @@
                 <div class="card-title">Spoken Chinese Currency Structure & Omissions</div>
                 
                 <div class="rule-box">
-                    <strong style="font-size: 1.15rem; color: var(--primary-color);">1. Monetary Unit Hierarchy:</strong>
+                    <strong style="font-size: 1.15rem; color: var(--primary-color);">1. Monetary Unit Structure:</strong>
                     <div class="sentence-builder" style="margin-top: 10px;">
                         <div class="slot slot-subj" style="background-color: #FEF3C7; color: #92400E;">kuài (Yuan)</div>
                         <div style="font-weight: bold; color: var(--primary-color);">➔ 10 x</div>
@@ -814,22 +839,22 @@
                         <div class="slot slot-obj">fēn (Cent)</div>
                     </div>
 
-                    <div style="background: white; padding: 14px; border-radius: 8px; margin-top: 12px; border-left: 4px solid var(--primary-color);">
-                        <strong style="color: var(--primary-color); font-size: 1.1rem;">Spoken Price Levels (Formality vs Daily Speech):</strong>
+                    <div style="background: white; padding: 14px; border-radius: 8px; margin-top: 12px; border-left: 4px solid var(--primary-color); width: 100%;">
+                        <strong style="color: var(--primary-color); font-size: 1.1rem;">Spoken Price Expressions (Formality vs Daily Speech):</strong>
                         
-                        <div style="margin-top: 8px;" class="vocab-pinyin">
+                        <div style="margin-top: 10px; line-height: 1.8;" class="vocab-pinyin">
                             <strong>• Full Form (Formal):</strong>
                             <br>RM 3.20 ➔ sān kuài èr máo qián
                             <br>RM 10.55 ➔ shí kuài wǔ máo wǔ fēn qián
                         </div>
                         
-                        <div style="margin-top: 8px;" class="vocab-pinyin">
+                        <div style="margin-top: 10px; line-height: 1.8;" class="vocab-pinyin">
                             <strong>• Slightly Complete:</strong>
                             <br>RM 3.20 ➔ sān kuài èr máo
                             <br>RM 10.55 ➔ shí kuài wǔ máo wǔ fēn
                         </div>
 
-                        <div style="margin-top: 8px;" class="vocab-pinyin">
+                        <div style="margin-top: 10px; line-height: 1.8;" class="vocab-pinyin">
                             <strong>• Most Common Daily Speech (Omission Rule):</strong>
                             <br>RM 3.20 ➔ <span class="grammar-hl">sān kuài èr</span>
                             <br>RM 10.55 ➔ <span class="grammar-hl">shí kuài wǔ máo wǔ</span>
@@ -840,7 +865,7 @@
                         </div>
                     </div>
 
-                    <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 10px; border-left: 4px solid var(--accent-color);" class="vocab-pinyin">
+                    <div style="background: white; padding: 12px; border-radius: 8px; margin-top: 10px; border-left: 4px solid var(--accent-color); width: 100%;" class="vocab-pinyin">
                         <strong>• Note on "2 máo":</strong>
                         <br>People say <span class="grammar-hl">èr máo qián</span> or <span class="grammar-hl">liǎng máo qián</span>. When "2 máo" is at the beginning, <span class="grammar-hl">liǎng máo</span> is often preferred.
                     </div>
@@ -849,7 +874,7 @@
                 <div class="rule-box" style="margin-top: 1rem;">
                     <strong style="font-size: 1.15rem; color: var(--primary-color);">2. Adjectives without Adverbs (<span class="grammar-hl">dà</span> vs <span class="grammar-hl">hěn dà</span>):</strong>
                     <p style="margin-top: 5px;">If an adjective DOES NOT have an adverb (like hěn, zhēn) before it, the sentence indicates <strong>Comparison</strong>!</p>
-                    <div style="background: white; padding: 10px 15px; border-radius: 8px; margin-top: 5px;" class="vocab-pinyin">
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; margin-top: 8px; width: 100%;" class="vocab-pinyin">
                         • Nín kàn, wǒ de píngguǒ <strong>dà</strong>. <span class="translation">(Look, my apples are BIGGER compared to others.)</span>
                     </div>
                 </div>
@@ -876,23 +901,23 @@
                 <table class="vocab-table">
                     <thead><tr><th>#</th><th>Pinyin</th><th>Meaning</th><th>Collocation & Example Sentence</th></tr></thead>
                     <tbody>
-                        <tr><td class="vocab-num">#1</td><td class="vocab-pinyin">xiānsheng</td><td>Mr.; sir</td><td><div class="vocab-collo">Zhāng <span class="collo-target">xiānsheng</span></div><div class="vocab-sent">Xiānsheng, nín yào shénme?</div></td></tr>
-                        <tr><td class="vocab-num">#2</td><td class="vocab-pinyin">yào</td><td>to want</td><td><div class="vocab-collo"><span class="collo-target">yào</span> shénme</div><div class="vocab-sent">Nín hái yào shénme?</div></td></tr>
+                        <tr><td class="vocab-num">#1</td><td class="vocab-pinyin-cell">xiānsheng</td><td>Mr.; sir</td><td><div class="vocab-collo">Zhāng <span class="collo-target">xiānsheng</span></div><div class="vocab-sent">Xiānsheng, nín yào shénme?</div></td></tr>
+                        <tr><td class="vocab-num">#2</td><td class="vocab-pinyin-cell">yào</td><td>to want</td><td><div class="vocab-collo"><span class="collo-target">yào</span> shénme</div><div class="vocab-sent">Nín hái yào shénme?</div></td></tr>
                         <tr>
-                            <td class="vocab-num">#3</td><td class="vocab-pinyin">shīfu</td><td>master (master / boss)</td>
+                            <td class="vocab-num">#3</td><td class="vocab-pinyin-cell">shīfu</td><td>master (master / boss)</td>
                             <td>
                                 <div class="vocab-collo">Zhāng <span class="collo-target">shīfu</span></div>
                                 <div class="vocab-sent">Nín hǎo, shīfu.</div>
                                 <div class="vocab-note">💡 Note: Respectful form of address for skilled workers or service providers (drivers, barbers, vendors, mechanics, hotel staff) to show respect in a casual setting.</div>
                             </td>
                         </tr>
-                        <tr><td class="vocab-num">#5</td><td class="vocab-pinyin">duìbuqǐ</td><td>I'm sorry</td><td><div class="vocab-collo">duìbuqǐ</div><div class="vocab-sent">Duìbuqǐ, wǒ shì wèn...</div></td></tr>
-                        <tr><td class="vocab-num">#6</td><td class="vocab-pinyin">zěnme</td><td>how</td><td><div class="vocab-collo"><span class="collo-target">zěnme</span> shuō</div><div class="vocab-sent">Zhège Hànyǔ zěnme shuō?</div></td></tr>
-                        <tr><td class="vocab-num">#7</td><td class="vocab-pinyin">róngyì</td><td>easy</td><td><div class="vocab-collo">hěn <span class="collo-target">róngyì</span> / bù <span class="collo-target">róngyì</span></div><div class="vocab-sent">Nín gēn wǒ xué, hěn róngyì.</div></td></tr>
-                        <tr><td class="vocab-num">#14</td><td class="vocab-pinyin">zuò</td><td>to do, to make</td><td><div class="vocab-collo"><span class="collo-target">zuò</span> ge péngyou</div><div class="vocab-sent">Hǎo, zuò ge péngyou.</div></td></tr>
-                        <tr><td class="vocab-num">#16</td><td class="vocab-pinyin">sòng</td><td>to give as gift</td><td><div class="vocab-collo"><span class="collo-target">sòng</span> nín yí ge píngguǒ / <span class="collo-target">sòng</span> tā yì zhāng guāngpán</div><div class="vocab-sent">Wǒ zài sòng nín yí ge píngguǒ.</div></td></tr>
-                        <tr><td class="vocab-num">#17</td><td class="vocab-pinyin">gěi</td><td>to give</td><td><div class="vocab-collo"><span class="collo-target">gěi</span> nín qián / <span class="collo-target">gěi</span> wǒ yí ge běnzi</div><div class="vocab-sent">Gěi nín qián.</div></td></tr>
-                        <tr><td class="vocab-num">#18</td><td class="vocab-pinyin">zhǎo (qián)</td><td>to give change</td><td><div class="vocab-collo"><span class="collo-target">zhǎo</span> nín liù kuài</div><div class="vocab-sent">Wǒ zhǎo nín liù kuài.</div></td></tr>
+                        <tr><td class="vocab-num">#5</td><td class="vocab-pinyin-cell">duìbuqǐ</td><td>I'm sorry</td><td><div class="vocab-collo">duìbuqǐ</div><div class="vocab-sent">Duìbuqǐ, wǒ shì wèn...</div></td></tr>
+                        <tr><td class="vocab-num">#6</td><td class="vocab-pinyin-cell">zěnme</td><td>how</td><td><div class="vocab-collo"><span class="collo-target">zěnme</span> shuō</div><div class="vocab-sent">Zhège Hànyǔ zěnme shuō?</div></td></tr>
+                        <tr><td class="vocab-num">#7</td><td class="vocab-pinyin-cell">róngyì</td><td>easy</td><td><div class="vocab-collo">hěn <span class="collo-target">róngyì</span> / bù <span class="collo-target">róngyì</span></div><div class="vocab-sent">Nín gēn wǒ xué, hěn róngyì.</div></td></tr>
+                        <tr><td class="vocab-num">#14</td><td class="vocab-pinyin-cell">zuò</td><td>to do, to make</td><td><div class="vocab-collo"><span class="collo-target">zuò</span> ge péngyou</div><div class="vocab-sent">Hǎo, zuò ge péngyou.</div></td></tr>
+                        <tr><td class="vocab-num">#16</td><td class="vocab-pinyin-cell">sòng</td><td>to give as gift</td><td><div class="vocab-collo"><span class="collo-target">sòng</span> nín yí ge píngguǒ / <span class="collo-target">sòng</span> tā yì zhāng guāngpán</div><div class="vocab-sent">Wǒ zài sòng nín yí ge píngguǒ.</div></td></tr>
+                        <tr><td class="vocab-num">#17</td><td class="vocab-pinyin-cell">gěi</td><td>to give</td><td><div class="vocab-collo"><span class="collo-target">gěi</span> nín qián / <span class="collo-target">gěi</span> wǒ yí ge běnzi</div><div class="vocab-sent">Gěi nín qián.</div></td></tr>
+                        <tr><td class="vocab-num">#18</td><td class="vocab-pinyin-cell">zhǎo (qián)</td><td>to give change</td><td><div class="vocab-collo"><span class="collo-target">zhǎo</span> nín liù kuài</div><div class="vocab-sent">Wǒ zhǎo nín liù kuài.</div></td></tr>
                     </tbody>
                 </table>
             </div>
